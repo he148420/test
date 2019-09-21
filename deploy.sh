@@ -24,6 +24,9 @@ git init && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
 
+git add -A
+git commit -m 'deploy'
+
 git config --list
 
 ## Initializes the repository path using the access token.
