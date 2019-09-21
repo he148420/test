@@ -11,6 +11,8 @@ jobs:
     - uses: actions/setup-node@v1
 
     - name: build and Deploy
-      run: bash deploy.sh
+      run: |
+        npm install
+        bash deploy.sh
       shell: bash
       
