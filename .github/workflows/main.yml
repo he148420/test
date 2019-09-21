@@ -8,11 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    
 
     - name: build and Deploy
       run: |
         npm install
-        bash deploy.sh
-      shell: bash
+        ls
       
