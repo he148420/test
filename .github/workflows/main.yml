@@ -1,18 +1,25 @@
-name: Deploy to Vuepress
-on:
-  push:
-    branches:
-      - master
+name: Node CI
+
+on: [push]
+
 jobs:
-  build-and-deploy:
+  build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node_version }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        version: ${{ matrix.node_version }}
-
-    - name: Build and Deploy
-      run: bash ./deploy.sh
-      shell: bash
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build
+      env:
+        CI: true
