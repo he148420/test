@@ -1,7 +1,7 @@
 module.exports = {
   title: "Hello, Vuepress",
   description: "Just playing",
-  base: '/',
+  base: '/test/',
   themeConfig: {
     nav: [{
       text: '首页',
