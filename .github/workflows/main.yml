@@ -13,6 +13,7 @@ jobs:
     - name: Build and Deploy
       run: |
         npm install
-        npm run build
+        node -v
+        npm -v
         ls
       
