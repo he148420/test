@@ -1,4 +1,4 @@
-name: Deploy to Vuepress
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
@@ -11,9 +11,9 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      run: |
-        npm install
-        node -v
-        npm -v
-        ls
-      
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+        BUILD_SCRIPT: npm install && npm run-script build
