@@ -10,5 +10,5 @@ jobs:
       - name: Build
         run: |
           npm install
-          bash ./deploy
+          bash deploy.sh
         
