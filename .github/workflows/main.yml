@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Vuepress
 on:
   push:
     branches:
@@ -7,9 +7,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Build
-        run: |
-          npm install
-          ls
-          bash ./deploy.sh
-        
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      run: |
+        npm install
+        node -v
+        npm -v
+        ls
+        bash ./deploy.sh
