@@ -16,4 +16,4 @@ jobs:
         node -v
         npm -v
         ls
-        bash ./deploy.sh
+        npm run build
