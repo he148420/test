@@ -11,6 +11,8 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
         npm install
         node -v
