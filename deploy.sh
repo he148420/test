@@ -27,9 +27,9 @@ git config --global user.name "${COMMIT_NAME}" && \
 git config --list
 
 ## Initializes the repository path using the access token.
-#REPOSITORY_PATH="https://${access_token}@github.com/he148420/test.git" && \
+REPOSITORY_PATH="https://${access_token}@github.com/he148420/test.git" && \
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-#git push -f $REPOSITORY_PATH master:gh-pages
+git push -f $REPOSITORY_PATH master:gh-pages
 
 cd -
