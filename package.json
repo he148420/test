@@ -1,0 +1,14 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "releases": "/bin/bash deploy.sh"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.1.0"
+  }
+}
