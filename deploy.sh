@@ -24,6 +24,8 @@ git init && \
 git config --global user.email "${COMMIT_EMAIL}" && \
 git config --global user.name "${COMMIT_NAME}" && \
 
+git config --list
+
 ## Initializes the repository path using the access token.
 #REPOSITORY_PATH="https://${access_token}@github.com/he148420/test.git" && \
 
