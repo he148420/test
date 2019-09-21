@@ -15,3 +15,4 @@ jobs:
 
     - name: Build and Deploy
       run: bash ./deploy.sh
+      shell: bash
